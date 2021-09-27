@@ -10,8 +10,12 @@ body {
     resize: none;
     color: #000000;
     border-left: 1px solid black;
-    padding: 10px;
   }
+
+ .time-label {
+   text-align: right;
+   padding-top: 3px;
+ }
   
   .jumbotron {
     text-align: center;
@@ -31,7 +35,7 @@ body {
   }
   
   .row {
-    white-space: pre-wrap;
+    /*white-space: pre-wrap;*/
     height: 80px;
     border-top: 1px solid white;
   }
@@ -55,6 +59,7 @@ body {
   .future {
     background-color: #77dd77;
     color: white;
+    height: 80px;
   }
   
   .saveBtn {
