@@ -3,40 +3,77 @@
 document.querySelector('#currentDay').textContent = moment().format('LLLL');
 
 //Clear local storage at 24:59AM
-var minuteOfHour = moment().format('m');
-var hourOfDay = moment().format('H')
-if ((hourOfDay == 24) && (minuteOfHour == 59)) {
+var minute = moment().format('m');
+var hour = moment().format('H')
+if ((hour == 24) && (minute == 59)) {
     localStorage.clear();
     checkStorage();
 }
-
-
-// var rows = document.querySelector('.row')
-// Row color change control
-// var rowColor = document.querySelectorAll('[data-id]');
-// console.log(rowColor)
-// var rowColor_array = Array.from(rowColor);
-// console.log(rowColor_array)
-
-// rowColor_array.forEach(function(elem) {
-//     if (elem.dataset.id > hourOfDay) {
-//         rows.setAttribute("style", "background-color: grey;");
-//     }
-    
-// });
-
-
-
-
-
-
-// var rowColor = document.querySelector('.container');
-// console.log(rowColor.childElementCount);
-
-// if (hourOfDay == 9) {
-//     question5.setAttribute("style", "visibility: hidden;");
-// }
-
+// Change row color based on time.
+var row9 = document.querySelector("#row9");
+if (hour == 9) {
+    row9.setAttribute("style", "background-color: red");
+} else if (hour < 9) {
+    row9.setAttribute("style", "background-color: lightgreen")
+} else {
+    row9.setAttribute("style", "background-color: grey")
+}
+var row10 = document.querySelector("#row10");
+if (hour == 10) {
+    row10.setAttribute("style", "background-color: red");
+} else if (hour < 10) {
+    row10.setAttribute("style", "background-color: lightgreen")
+} else {
+    row10.setAttribute("style", "background-color: grey")
+}
+var row11 = document.querySelector("#row11");
+if (hour == 11) {
+    row11.setAttribute("style", "background-color: red");
+} else if (hour < 11) {
+    row11.setAttribute("style", "background-color: lightgreen")
+} else {
+    row11.setAttribute("style", "background-color: grey")
+}
+var row12 = document.querySelector("#row12");
+if (hour == 12) {
+    row12.setAttribute("style", "background-color: red");
+} else if (hour < 12) {
+    row12.setAttribute("style", "background-color: lightgreen")
+} else {
+    row12.setAttribute("style", "background-color: grey")
+}
+var row1 = document.querySelector("#row1");
+if (hour == 13) {
+    row1.setAttribute("style", "background-color: red");
+} else if (hour < 13) {
+    row1.setAttribute("style", "background-color: lightgreen")
+} else {
+    row1.setAttribute("style", "background-color: grey")
+}
+var row2 = document.querySelector("#row2");
+if (hour == 14) {
+    row2.setAttribute("style", "background-color: red");
+} else if (hour < 14) {
+    row2.setAttribute("style", "background-color: lightgreen")
+} else {
+    row2.setAttribute("style", "background-color: grey")
+}
+var row3 = document.querySelector("#row3");
+if (hour == 15) {
+    row3.setAttribute("style", "background-color: red");
+} else if (hour < 15) {
+    row3.setAttribute("style", "background-color: lightgreen")
+} else {
+    row3.setAttribute("style", "background-color: grey")
+}
+var row4 = document.querySelector("#row4");
+if (hour == 16) {
+    row4.setAttribute("style", "background-color: red");
+} else if (hour < 16) {
+    row1.setAttribute("style", "background-color: lightgreen")
+} else {
+    row4.setAttribute("style", "background-color: grey")
+}
 
 //Show existing text from storage. If blank show placeholder.
 function checkStorage() {
@@ -90,7 +127,6 @@ function checkStorage() {
         return;
     }
 }
-
 
 //Button variables
 var button9 = $('#button9');
